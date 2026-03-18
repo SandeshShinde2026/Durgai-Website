@@ -1,7 +1,3 @@
 {
-  "buildCommand": "cd durgai-website && npm run build",
-  "outputDirectory": "durgai-website/.next",
-  "installCommand": "cd durgai-website && npm install",
-  "framework": "nextjs",
-  "devCommand": "cd durgai-website && npm run dev"
+  "framework": "nextjs"
 }
