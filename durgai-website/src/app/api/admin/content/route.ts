@@ -2,6 +2,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import { NextResponse, type NextRequest } from 'next/server'
 import { getServerSession } from 'next-auth'
+import { Redis } from '@upstash/redis'
 import { authOptions } from '@/auth'
 import { issueAdminCsrfToken, verifyAdminCsrf } from '@/lib/admin-csrf'
 import { writeAdminAuditLog } from '@/lib/admin-audit'
@@ -15,8 +16,31 @@ function isLocale(locale: string): locale is AppLocale {
   return LOCALES.includes(locale as AppLocale)
 }
 
+function getRedis() {
+  return new Redis({
+    url: process.env.UPSTASH_REDIS_REST_KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL ?? '',
+    token: process.env.UPSTASH_REDIS_REST_KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN ?? '',
+  })
+}
+
+function getRedisKey(locale: AppLocale) {
+  return `content:${locale}`
+}
+
 function getMessagesPath(locale: AppLocale) {
   return path.join(process.cwd(), 'src', 'messages', `${locale}.json`)
+}
+
+async function getContent(locale: AppLocale): Promise<Record<string, unknown>> {
+  try {
+    const redis = getRedis()
+    const cached = await redis.get<Record<string, unknown>>(getRedisKey(locale))
+    if (cached) return cached
+  } catch {
+    // Redis unavailable — fall through to filesystem
+  }
+  const fileContent = await fs.readFile(getMessagesPath(locale), 'utf-8')
+  return JSON.parse(fileContent) as Record<string, unknown>
 }
 
 export async function GET(request: NextRequest) {
@@ -32,8 +56,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid locale.' }, { status: 400 })
   }
 
-  const fileContent = await fs.readFile(getMessagesPath(locale), 'utf-8')
-  const content = JSON.parse(fileContent) as Record<string, unknown>
+  const content = await getContent(locale)
   const response = NextResponse.json({ locale, content })
   const csrfToken = issueAdminCsrfToken(response)
 
@@ -149,7 +172,10 @@ export async function PUT(request: NextRequest) {
   }
 
   const normalizedContent = await normalizeStoriesImages(content as Record<string, unknown>)
-  await fs.writeFile(getMessagesPath(locale), `${JSON.stringify(normalizedContent, null, 2)}\n`, 'utf-8')
+
+  const redis = getRedis()
+  await redis.set(getRedisKey(locale as AppLocale), normalizedContent)
+
   await writeAdminAuditLog({
     event: 'content_update',
     username: session.user.name ?? 'admin',
