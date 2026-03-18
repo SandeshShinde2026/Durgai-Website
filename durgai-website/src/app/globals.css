@@ -74,6 +74,38 @@ body {
   background: #e53935;
 }
 
+/* ─── Force Western Arabic numerals for Devanagari locales ──── */
+[data-locale='hi'],
+[data-locale='mr'] {
+  font-variant-numeric: normal;
+}
+
+[data-locale='hi'] *,
+[data-locale='mr'] * {
+  font-variant-numeric: normal;
+}
+
+/* Override numeric glyphs to use Inter (Latin digits 0-9) */
+@font-face {
+  font-family: 'NumeralOverride';
+  src: local('Inter'), local('DM Sans'), local('system-ui');
+  unicode-range: U+0030-0039; /* 0–9 */
+}
+
+[data-locale='hi'] *,
+[data-locale='mr'] * {
+  font-family: 'NumeralOverride', var(--font-dm-sans);
+}
+
+[data-locale='hi'] h1,
+[data-locale='hi'] h2,
+[data-locale='hi'] h3,
+[data-locale='mr'] h1,
+[data-locale='mr'] h2,
+[data-locale='mr'] h3 {
+  font-family: 'NumeralOverride', var(--font-playfair);
+}
+
 /* ─── Typography utilities ───────────────────────────────────── */
 .font-heading {
   font-family: var(--font-playfair);
