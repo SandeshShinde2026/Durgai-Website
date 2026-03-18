@@ -1,0 +1,36 @@
+# Local tool / external skill
+ui-ux-pro-max-skill/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Next.js
+durgai-website/.next/
+durgai-website/out/
+
+# Node.js
+durgai-website/node_modules/
+
+# Environment variables
+durgai-website/.env
+durgai-website/.env.local
+durgai-website/.env.*.local
+
+# TypeScript build info
+durgai-website/tsconfig.tsbuildinfo
+
+# Package lock (optional – remove this line if you want to commit it)
+# durgai-website/package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Root variables ─────────────────────────────────────────── */
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  --font-en-heading: 'Merriweather', Georgia, serif;
+  --font-en-body: 'Inter', system-ui, sans-serif;
+}
+
+[data-locale='en'] {
+  --font-playfair: var(--font-en-heading);
+  --font-dm-sans: var(--font-en-body);
+}
+
+/* ─── Base resets ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: #1e293b;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* ─── Focus rings (WCAG 2.2 AA) ─────────────────────────────── */
+:focus-visible {
+  outline: 3px solid #e53935;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar hide utility ─────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Custom scrollbar for content areas ─────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffcdd2;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e53935;
+}
+
+/* ─── Typography utilities ───────────────────────────────────── */
+.font-heading {
+  font-family: var(--font-playfair);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+}
+
+/* Premium heading letter-spacing */
+h1, h2, h3 {
+  font-family: var(--font-playfair);
+  letter-spacing: -0.01em;
+}
+
+/* DM Sans for all UI elements */
+button, input, label, p, span, a, li {
+  font-family: var(--font-dm-sans);
+}
+
+/* ─── Gradient text ─────────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Card hover lift ────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(229, 57, 53, 0.12);
+}
+
+/* ─── Shimmer skeleton ────────────────────────────────────────── */
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    #f1f5f9 25%,
+    #ffffff 50%,
+    #f1f5f9 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* ─── Pulse ring decoration ───────────────────────────────────── */
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(229, 57, 53, 0.3);
+  animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* ─── Section spacing ─────────────────────────────────────────── */
+.section-py {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 1024px) {
+  .section-py {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* ─── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── CSS Reveal utilities (used alongside Framer Motion) ─────── */
+
+/* Clip-path reveal — for section headings */
+.reveal-clip {
+  clip-path: inset(0 0 100% 0);
+  opacity: 0;
+}
+.reveal-clip.is-visible {
+  animation: revealClip 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes revealClip {
+  to {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+  }
+}
+
+/* Blur-in reveal */
+.reveal-blur {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-blur.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Slide-left reveal */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Marquee pause on hover */
+.marquee-track:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* ─── Gradient text variant (warm gold) ──────────────────────── */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c62828 0%, #e53935 50%, #ef5350 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

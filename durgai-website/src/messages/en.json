@@ -1,0 +1,623 @@
+{
+  "Layout": {
+    "skipToMain": "Skip to main content"
+  },
+  "Metadata": {
+    "title": "Durgai Hruday Prathisthan — Heart Care for Children",
+    "description": "Free heart checkups and life-saving surgeries for children aged 0–13 in need. Donate today and give a child a healthy heartbeat.",
+    "keywords": "heart NGO India, paediatric heart surgery, free heart checkup, NGO donate, Durgai Hruday Prathisthan",
+    "ogTitle": "Durgai Hruday Prathisthan — Heart Care for Children",
+    "ogDescription": "Free heart checkups and life-saving surgeries for children aged 0–13. Your donation saves a life.",
+    "twitterTitle": "Durgai Hruday Prathisthan",
+    "twitterDescription": "Giving every child a chance at a healthy heart."
+  },
+  "Header": {
+    "logoAria": "Durgai Hruday Prathisthan — Home",
+    "brand": {
+      "top": "Durgai Hruday",
+      "bottom": "Prathisthan"
+    },
+    "nav": {
+      "needHelp": "Need Help",
+      "about": "About Us",
+      "impact": "Our Impact",
+      "stories": "Stories",
+      "transparency": "Transparency",
+      "contact": "Contact"
+    },
+    "donateNow": "Donate Now",
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu",
+      "navigation": "Navigation menu"
+    },
+    "taxLine": "80G & 12A certified · Tax deductible",
+    "language": {
+      "label": "Language",
+      "short": {
+        "en": "EN",
+        "hi": "हिं",
+        "mr": "मर"
+      },
+      "names": {
+        "en": "English",
+        "hi": "Hindi",
+        "mr": "Marathi"
+      }
+    }
+  },
+  "Footer": {
+    "aria": {
+      "footer": "Footer",
+      "home": "Home"
+    },
+    "brand": {
+      "top": "Durgai Hruday",
+      "bottom": "Prathisthan"
+    },
+    "description": "Free heart checkups and life-saving surgeries for children aged 0–13. Registered NGO | 80G | 12A | FCRA certified.",
+    "sections": {
+      "quickLinks": "Quick Links",
+      "getInvolved": "Get Involved",
+      "contact": "Contact"
+    },
+    "quickLinks": {
+      "about": "About Us",
+      "impact": "Our Impact",
+      "stories": "Success Stories",
+      "transparency": "Fund Transparency",
+      "needHelp": "Need Help?"
+    },
+    "getInvolved": {
+      "donate": "Donate Now",
+      "volunteer": "Volunteer",
+      "csr": "CSR / Corporate",
+      "camp": "Host a Camp",
+      "contact": "Contact Us"
+    },
+    "contact": {
+      "addressLine1": "123, Mukti Nagar, Pune 411001",
+      "addressLine2": "Maharashtra, India",
+      "phoneDisplay": "+91 98228 80375",
+      "phoneRaw": "+919822880375",
+      "email": "help@durgaihruday.org",
+      "whatsappCta": "Contact on WhatsApp"
+    },
+    "badges": {
+      "registeredNgo": "Reg. NGO",
+      "approved80g": "80G Approved",
+      "certified12a": "12A Certified",
+      "fcra": "FCRA",
+      "razorpaySecured": "Razorpay Secured"
+    },
+    "bottom": {
+      "rights": "© {year} Durgai Hruday Prathisthan. All rights reserved. Reg. No. MH/123/2020.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms",
+      "refund": "Refund Policy"
+    },
+    "medicalDisclaimer": {
+      "title": "Medical Disclaimer:",
+      "body": "Information on this website is provided for general awareness only and does not constitute medical advice. For any medical emergency, please contact a qualified healthcare professional or dial 108 immediately."
+    }
+  },
+  "FloatingDonateButton": {
+    "aria": {
+      "donateNow": "Donate Now"
+    },
+    "donateNow": "Donate Now",
+    "mobileLine1": "Every ₹500 helps a child",
+    "mobileLine2": "80G · Tax deductible donation"
+  },
+  "Hero": {
+    "aria": {
+      "section": "Hero",
+      "animatedHeart": "Animated heart"
+    },
+    "eyebrow": "Durgai Hruday Prathisthan · Est. 2020",
+    "heading": {
+      "line1": "Every Heart",
+      "highlight1": "Deserves",
+      "line2": "a Chance to Beat",
+      "highlight2": "Strong"
+    },
+    "subtext": {
+      "before": "Free heart checkups & life-saving surgeries for children aged",
+      "age": "0–13",
+      "after": ". No family should lose a child to a preventable heart condition."
+    },
+    "cta": {
+      "primary": "Donate Now — Save a Life",
+      "secondary": "See Our Impact"
+    },
+    "socialProof": {
+      "highlight": "1,200+ children",
+      "text": "have received care"
+    },
+    "socialProofAvatars": [
+      {
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      },
+      {
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      },
+      {
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      },
+      {
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      }
+    ],
+    "trustBadges": [
+      "80G Approved",
+      "12A Certified",
+      "FCRA",
+      "Razorpay Secured"
+    ],
+    "cardStats": {
+      "children": "Children Treated",
+      "surgeries": "Surgeries Funded",
+      "camps": "Health Camps"
+    },
+    "cardStatValues": {
+      "children": "1,200+",
+      "surgeries": "300+",
+      "camps": "50+"
+    },
+    "cardImageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg",
+    "imagePlaceholder": "Upload image from admin",
+    "floatingBadge": {
+      "tax": {
+        "title": "80G Approved",
+        "sub": "Tax-deductible donation"
+      },
+      "impact": {
+        "title": "Every ₹500 helps",
+        "sub": "Fund a child's checkup"
+      }
+    },
+    "scroll": "Scroll"
+  },
+  "TrustStrip": {
+    "aria": {
+      "section": "Trust and certifications",
+      "list": "Certifications and trust indicators"
+    },
+    "items": {
+      "registeredNgo": {
+        "label": "Registered NGO",
+        "sub": "MH/123/2020"
+      },
+      "approved80g": {
+        "label": "80G Approved",
+        "sub": "Tax deductible"
+      },
+      "certified12a": {
+        "label": "12A Certified",
+        "sub": "Income Tax"
+      },
+      "fcraApproved": {
+        "label": "FCRA Approved",
+        "sub": "Foreign contributions"
+      },
+      "partnerHospitals": {
+        "label": "8 Partner Hospitals",
+        "sub": "Across Maharashtra"
+      },
+      "razorpaySecured": {
+        "label": "Razorpay Secured",
+        "sub": "PCI-DSS compliant"
+      },
+      "csrEligible": {
+        "label": "CSR Eligible",
+        "sub": "Schedule VII"
+      },
+      "childrenTreated": {
+        "label": "1,200+ Children",
+        "sub": "Treated since 2020"
+      }
+    }
+  },
+  "ImpactStats": {
+    "eyebrow": "Our Impact",
+    "heading": {
+      "prefix": "Numbers That Tell a",
+      "highlight": "Human Story"
+    },
+    "description": "Every figure represents a child who received care, a family that found hope, and a community that came together.",
+    "aria": {
+      "statValue": "{value} {label}"
+    },
+    "stats": {
+      "children": {
+        "value": 1200,
+        "suffix": "+",
+        "label": "Children Treated",
+        "description": "Free heart checkups provided across Maharashtra"
+      },
+      "surgeries": {
+        "value": 300,
+        "suffix": "+",
+        "label": "Surgeries Funded",
+        "description": "Life-saving procedures supported by donor contributions"
+      },
+      "camps": {
+        "value": 50,
+        "suffix": "+",
+        "label": "Free Health Camps",
+        "description": "Community screening events held in rural areas"
+      },
+      "hospitals": {
+        "value": 8,
+        "suffix": "",
+        "label": "Partner Hospitals",
+        "description": "Empanelled hospitals across 5 districts"
+      }
+    }
+  },
+  "About": {
+    "aria": {
+      "heartIllustration": "Heart care illustration"
+    },
+    "cardImageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg",
+    "imagePlaceholder": "Upload image from admin",
+    "brand": {
+      "top": "Durgai Hruday",
+      "tagline": "Heart care with compassion"
+    },
+    "statValues": {
+      "yearsOfService": "4",
+      "districtsServed": "5",
+      "chargedToPatients": "₹0"
+    },
+    "stats": {
+      "yearsOfService": "Years of service",
+      "districtsServed": "Districts served",
+      "chargedToPatients": "Charged to patients"
+    },
+    "quote": {
+      "text": "No child should die from a heart condition that could have been treated.",
+      "author": "— Rajendra Shinde , Founder"
+    },
+    "eyebrow": "Who We Are",
+    "heading": {
+      "prefix": "A Heart for Every Child —",
+      "highlight": "No Exceptions"
+    },
+    "paragraph1": "Founded in 2020, Durgai Hruday Prathisthan is a registered NGO dedicated to ensuring that no family in Maharashtra loses a child to a congenital or acquired heart condition due to lack of money.",
+    "paragraph2": "We organise free mass cardiac screening camps in rural areas, connect diagnosed children with empanelled hospitals, and fund partial or complete surgical costs — all through the generosity of donors like you.",
+    "mission": {
+      "title": "Our Mission",
+      "body": "Provide free cardiac care to underprivileged children (0–13) across Maharashtra."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "body": "A Maharashtra where no child dies from a preventable heart condition."
+    },
+    "values": {
+      "zeroCost": "Zero cost to every patient family — always",
+      "transparency": "Transparent fund usage published quarterly",
+      "hospitals": "Empanelled, NABH-accredited partner hospitals",
+      "privacy": "Child privacy protected — all stories with full consent"
+    }
+  },
+  "Stories": {
+    "eyebrow": "Stories of Hope",
+    "heading": {
+      "prefix": "Children Who Got Their",
+      "highlight": "Second Chance"
+    },
+    "description": "Behind every donation is a real child, a real family, and a real miracle.",
+    "consentNote": "All stories are shared with written consent from guardians. Child identities are partially anonymised for privacy.",
+    "aria": {
+      "storyCard": "Story: {name}"
+    },
+    "photoConsentTag": "",
+    "fundedBy": "Funded by",
+    "waitingList": {
+      "highlight": "47 children",
+      "text": "are currently on our waiting list."
+    },
+    "cta": "Help the Next Child",
+    "stories": {
+      "arjun": {
+        "name": "Arjun, 4 yrs",
+        "location": "Solapur, Maharashtra",
+        "condition": "Ventricular Septal Defect (VSD)",
+        "outcome": "Successfully operated. Now a healthy, playful child.",
+        "fundedBy": "4 donor families"
+      },
+      "kavya": {
+        "name": "Kavya, 7 yrs",
+        "location": "Nashik, Maharashtra",
+        "condition": "Tetralogy of Fallot (ToF)",
+        "outcome": "Full recovery after corrective surgery at a partner hospital.",
+        "fundedBy": "1 CSR sponsor"
+      },
+      "rohan": {
+        "name": "Rohan, 2 yrs",
+        "location": "Kolhapur, Maharashtra",
+        "condition": "Patent Ductus Arteriosus (PDA)",
+        "outcome": "Underwent catheter closure. Discharged in 3 days.",
+        "fundedBy": "6 individual donors"
+      },
+      "sana": {
+        "name": "Sana, 9 yrs",
+        "location": "Latur, Maharashtra",
+        "condition": "Rheumatic Heart Disease",
+        "outcome": "Valve repair done. Back in school and thriving.",
+        "fundedBy": "Community fundraiser"
+      }
+    },
+    "items": [
+      {
+        "key": "arjun",
+        "name": "Arjun, 4 yrs",
+        "location": "Solapur, Maharashtra",
+        "condition": "Ventricular Septal Defect (VSD)",
+        "outcome": "Successfully operated. Now a healthy, playful child.",
+        "fundedBy": "4 donor families",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      },
+      {
+        "key": "kavya",
+        "name": "Kavya, 7 yrs",
+        "location": "Nashik, Maharashtra",
+        "condition": "Tetralogy of Fallot (ToF)",
+        "outcome": "Full recovery after corrective surgery at a partner hospital.",
+        "fundedBy": "1 CSR sponsor",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      },
+      {
+        "key": "rohan",
+        "name": "Rohan, 2 yrs",
+        "location": "Kolhapur, Maharashtra",
+        "condition": "Patent Ductus Arteriosus (PDA)",
+        "outcome": "Underwent catheter closure. Discharged in 3 days.",
+        "fundedBy": "6 individual donors",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      },
+      {
+        "key": "sana",
+        "name": "Sana, 9 yrs",
+        "location": "Latur, Maharashtra",
+        "condition": "Rheumatic Heart Disease",
+        "outcome": "Valve repair done. Back in school and thriving.",
+        "fundedBy": "Community fundraiser",
+        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+      }
+    ]
+  },
+  "HowYouCanHelp": {
+    "eyebrow": "How You Can Help",
+    "heading": {
+      "prefix": "Three Ways to Make a",
+      "highlight": "Difference"
+    },
+    "description": "Whether you need our help, want to give, or want to serve — there's a place for you in our mission.",
+    "featured": "Most Impactful",
+    "cards": {
+      "need-help": {
+        "tag": "For Families",
+        "title": "Need a Free Heart Checkup?",
+        "description": "If your child (0–13 yrs) shows symptoms or has been diagnosed with a heart condition, apply for free cardiac screening at our next camp. No paperwork, no cost.",
+        "cta": "Apply for Free Checkup"
+      },
+      "donate": {
+        "tag": "Donate",
+        "title": "Fund a Surgery, Save a Life",
+        "description": "Your donation of ₹500 covers a full checkup. ₹2,000 funds medication. ₹50,000 sponsors a life-saving surgery for a child in need.",
+        "cta": "Donate Now"
+      },
+      "volunteer": {
+        "tag": "Volunteer / CSR",
+        "title": "Volunteer or Partner with Us",
+        "description": "Join as a volunteer, host a health camp, or partner through your company's CSR program under Schedule VII. Together we can reach more children.",
+        "cta": "Get Involved"
+      }
+    }
+  },
+  "Transparency": {
+    "eyebrow": "Fund Transparency",
+    "heading": {
+      "prefix": "Where Does Your",
+      "highlight": "Money Go?"
+    },
+    "description": "We publish quarterly fund utilisation reports. 85 paise of every rupee directly reaches a patient. No financial secrets — ever.",
+    "aria": {
+      "breakdownList": "Fund allocation breakdown",
+      "impactSummary": "Donation impact summary"
+    },
+    "breakdown": {
+      "medical": {
+        "label": "Medical & Surgical Care",
+        "description": "Direct patient: surgery costs, medicines, post-op care"
+      },
+      "camps": {
+        "label": "Camps & Outreach",
+        "description": "Health camp logistics, travel, equipment, staff"
+      },
+      "admin": {
+        "label": "Admin & Overhead",
+        "description": "Staff, office, compliance, reporting — industry min."
+      }
+    },
+    "summary": {
+      "title": "85% reaches patients directly",
+      "body": "Industry benchmark: 70%. We exceed it by 15 points."
+    },
+    "documents": {
+      "title": "Public Documents",
+      "items": {
+        "annualReport": "Annual Report 2023–24",
+        "auditedAccounts": "Audited Accounts 2023–24",
+        "fcraCertificate": "FCRA Certificate",
+        "csrImpact": "CSR Impact Report"
+      }
+    },
+    "promise": {
+      "title": "Our Promise to You",
+      "items": [
+        "Donation receipts sent within 24 hours",
+        "80G certificate by email for tax filing",
+        "Quarterly impact update every 90 days",
+        "Unsubscribe from updates anytime"
+      ]
+    }
+  },
+  "Donation": {
+    "eyebrow": "Donate",
+    "heading": {
+      "prefix": "Give a Child a",
+      "highlight": "Healthy Heartbeat"
+    },
+    "description": "100% online. Instant 80G receipt. Your donation is tax-deductible under Section 80G of the Income Tax Act.",
+    "modes": {
+      "oneTime": "One-Time Donation",
+      "monthly": "Monthly Giving"
+    },
+    "amount": {
+      "choose": "Choose an amount",
+      "customLabel": "Or enter custom amount",
+      "customPlaceholder": "e.g. 3,000",
+      "billedMonthly": "(billed monthly)"
+    },
+    "aria": {
+      "customAmount": "Custom donation amount in rupees"
+    },
+    "impact": {
+      "screening": "Funds 1 child's full cardiac screening",
+      "medicines": "Covers 1 month of post-op medicines",
+      "tests": "Pays for an ECG + echo for 5 children",
+      "workup": "Sponsors diagnostic workup for a complex case",
+      "catheter": "Funds catheter procedure for 1 child",
+      "surgery": "Sponsors a complete open-heart surgery",
+      "fallback": "Helps {count} children with screenings"
+    },
+    "form": {
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email (for 80G receipt)",
+      "emailPlaceholder": "you@example.com"
+    },
+    "cta": {
+      "donateAmount": "Donate {amount}{suffix}",
+      "perMonthSuffix": "/mo",
+      "chooseAmount": "Choose an Amount"
+    },
+    "trust": {
+      "secure": "Razorpay secured · SSL encrypted",
+      "receipt": "80G receipt in 24 hrs"
+    },
+    "paymentMethods": "UPI · Net Banking · Credit / Debit Card · Wallets · International Cards",
+    "alerts": {
+      "redirecting": "Redirecting to Razorpay for {amount} ({mode})"
+    }
+  },
+  "ContactSection": {
+    "eyebrow": "Contact",
+    "heading": "Need Help? Reach Us Directly",
+    "description": "For support, partnership, or camp-related queries, connect with us on WhatsApp, call, or email and our team will assist you.",
+    "phoneDisplay": "+91 98228 80375",
+    "phoneRaw": "+919822880375",
+    "email": "durgailic@gmail.com",
+    "addressLine1": "P-5, Vishal Garden, Chakan, Pune",
+    "addressLine2": "Maharashtra, India",
+    "whatsappCta": "Contact on WhatsApp",
+    "cards": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    }
+  },
+  "PolicyPages": {
+    "shared": {
+      "backHome": "← Back to home",
+      "lastUpdated": "Last updated: {date}"
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy | Durgai Hruday Prathisthan",
+        "description": "How Durgai Hruday Prathisthan collects, uses and protects your personal data."
+      },
+      "title": "Privacy Policy",
+      "intro": "We respect your privacy and are committed to protecting personal data shared by donors, volunteers and families seeking support.",
+      "updatedDate": "18 March 2026",
+      "sections": {
+        "collection": {
+          "title": "1) Information we collect",
+          "body": "We may collect your name, phone number, email, donation details and any information submitted through forms or support requests."
+        },
+        "usage": {
+          "title": "2) How we use information",
+          "body": "We use your data to process donations, issue receipts, coordinate support, send impact updates and improve our services."
+        },
+        "sharing": {
+          "title": "3) Data sharing and security",
+          "body": "We do not sell personal data. Information is shared only with trusted service providers (for payment, communication or compliance) and protected through reasonable security measures."
+        },
+        "rights": {
+          "title": "4) Your rights",
+          "body": "You may request data correction, deletion or communication preference changes at any time by contacting us."
+        }
+      },
+      "contact": "For privacy-related questions, write to help@durgaihruday.org."
+    },
+    "terms": {
+      "meta": {
+        "title": "Terms & Conditions | Durgai Hruday Prathisthan",
+        "description": "Terms governing donations, website usage and services offered by Durgai Hruday Prathisthan."
+      },
+      "title": "Terms & Conditions",
+      "intro": "By using this website or donating through it, you agree to the terms below.",
+      "updatedDate": "18 March 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1) Acceptance of terms",
+          "body": "Use of this website confirms that you accept these terms and all applicable laws."
+        },
+        "services": {
+          "title": "2) Nature of services",
+          "body": "The organisation provides charitable support for paediatric heart care subject to medical review, eligibility and available funds."
+        },
+        "payments": {
+          "title": "3) Donations and receipts",
+          "body": "All donations are voluntary. Tax receipts are issued as per applicable law and on successful payment confirmation."
+        },
+        "liability": {
+          "title": "4) Liability limitation",
+          "body": "Website content is for general information and cannot replace professional medical advice. The organisation is not liable for decisions taken solely on website content."
+        }
+      },
+      "contact": "For questions about these terms, contact help@durgaihruday.org."
+    },
+    "refund": {
+      "meta": {
+        "title": "Refund Policy | Durgai Hruday Prathisthan",
+        "description": "Refund policy for donations made to Durgai Hruday Prathisthan."
+      },
+      "title": "Refund Policy",
+      "intro": "Donations are generally treated as final and used quickly for patient care. Refunds are considered only in exceptional situations.",
+      "updatedDate": "18 March 2026",
+      "sections": {
+        "eligibility": {
+          "title": "1) Refund eligibility",
+          "body": "Refunds may be reviewed for duplicate transactions, technical errors or unauthorised payments reported promptly."
+        },
+        "process": {
+          "title": "2) How to request",
+          "body": "Send your request with payment reference, date, amount and reason to help@durgaihruday.org from your registered email."
+        },
+        "timeline": {
+          "title": "3) Review timeline",
+          "body": "Verified requests are usually processed within 7–10 working days through the original payment method."
+        },
+        "exceptions": {
+          "title": "4) Non-refundable cases",
+          "body": "Donations already allocated to treatment, camp operations or committed medical expenses may not be refundable."
+        }
+      },
+      "contact": "For refund assistance, write to help@durgaihruday.org with your transaction details."
+    }
+  }
+}
