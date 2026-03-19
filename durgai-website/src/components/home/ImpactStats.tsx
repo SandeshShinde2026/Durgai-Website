@@ -58,7 +58,7 @@ function CountUp({
 }) {
   const [count, setCount] = useState(0)
   const reduce = useReducedMotion()
-  const numberLocale = locale === 'hi' ? 'hi-IN' : locale === 'mr' ? 'mr-IN' : 'en-IN'
+  const numberLocale = locale === 'hi' || locale === 'mr' ? `${locale}-IN-u-nu-deva` : 'en-IN'
 
   useEffect(() => {
     if (!inView) return
