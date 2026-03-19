@@ -5,13 +5,12 @@ import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { getMessages } from '@/i18n/messages'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 type LocaleLayoutProps = {
   children: React.ReactNode
   params: Promise<{ locale: string }>
-}
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }))
 }
 
 const OPEN_GRAPH_LOCALE: Record<string, string> = {
