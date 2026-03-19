@@ -1,4 +1,11 @@
-import { Playfair_Display, DM_Sans, Merriweather, Inter } from 'next/font/google'
+import {
+  Playfair_Display,
+  DM_Sans,
+  Merriweather,
+  Inter,
+  Noto_Sans_Devanagari,
+  Noto_Serif_Devanagari,
+} from 'next/font/google'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -30,6 +37,20 @@ const inter = Inter({
   display: 'swap',
 })
 
+const notoSansDevanagari = Noto_Sans_Devanagari({
+  subsets: ['latin', 'devanagari'],
+  variable: '--font-devanagari-body',
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+})
+
+const notoSerifDevanagari = Noto_Serif_Devanagari({
+  subsets: ['latin', 'devanagari'],
+  variable: '--font-devanagari-heading',
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -38,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} ${merriweather.variable} ${inter.variable}`}
+      className={`${playfair.variable} ${dmSans.variable} ${merriweather.variable} ${inter.variable} ${notoSansDevanagari.variable} ${notoSerifDevanagari.variable}`}
       suppressHydrationWarning
     >
       <body className="font-body antialiased">
