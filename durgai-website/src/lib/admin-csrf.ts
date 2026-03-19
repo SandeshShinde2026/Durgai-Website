@@ -45,9 +45,22 @@ export function verifyAdminCsrf(request: NextRequest) {
 
   const origin = request.headers.get('origin')
 
-  if (!origin) {
-    return false
+  if (origin) {
+    try {
+      return new URL(origin).origin === request.nextUrl.origin
+    } catch {
+      return false
+    }
   }
 
-  return origin === request.nextUrl.origin
+  const referer = request.headers.get('referer')
+  if (referer) {
+    try {
+      return new URL(referer).origin === request.nextUrl.origin
+    } catch {
+      return false
+    }
+  }
+
+  return true
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { signOut } from 'next-auth/react'
 
@@ -105,6 +105,7 @@ function addArrayItemAtPath(root: unknown, path: JsonPath): unknown {
 
 export default function AdminContentEditor() {
   const router = useRouter()
+  const latestLoadRequestId = useRef(0)
   const [locale, setLocale] = useState<Locale>('en')
   const [content, setContent] = useState<JsonObject | null>(null)
   const [selectedSection, setSelectedSection] = useState('')
@@ -134,12 +135,18 @@ export default function AdminContentEditor() {
   }, [sectionKeys, selectedSection])
 
   const loadLocale = useCallback(async (targetLocale: Locale) => {
+    const requestId = ++latestLoadRequestId.current
     setIsLoading(true)
     setStatus('Loading content...')
 
     const response = await fetch(`/api/admin/content?locale=${targetLocale}`, {
       cache: 'no-store',
+      credentials: 'same-origin',
     })
+
+    if (requestId !== latestLoadRequestId.current) {
+      return
+    }
 
     if (response.status === 401) {
       setUploadingFieldId('')
@@ -191,6 +198,7 @@ export default function AdminContentEditor() {
 
     const response = await fetch('/api/admin/content', {
       method: 'PUT',
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
         'x-admin-csrf-token': csrfToken,
@@ -208,6 +216,12 @@ export default function AdminContentEditor() {
 
     if (!response.ok) {
       const data = (await response.json().catch(() => ({}))) as { error?: string }
+      if (response.status === 403 && data.error === 'Invalid CSRF token.') {
+        await loadLocale(locale)
+        setStatus('Security token refreshed. Please click save again.')
+        setIsSaving(false)
+        return
+      }
       setStatus(data.error ?? 'Save failed.')
       setIsSaving(false)
       return
@@ -253,6 +267,7 @@ export default function AdminContentEditor() {
 
     const response = await fetch('/api/admin/upload-image', {
       method: 'POST',
+      credentials: 'same-origin',
       headers: {
         'x-admin-csrf-token': csrfToken,
       },

@@ -4,7 +4,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { Redis } from '@upstash/redis'
 import { authOptions } from '@/auth'
-import { issueAdminCsrfToken, verifyAdminCsrf } from '@/lib/admin-csrf'
+import { ADMIN_CSRF_COOKIE, issueAdminCsrfToken, verifyAdminCsrf } from '@/lib/admin-csrf'
 import { writeAdminAuditLog } from '@/lib/admin-audit'
 import { routing, type AppLocale } from '@/i18n/routing'
 
@@ -58,7 +58,8 @@ export async function GET(request: NextRequest) {
 
   const content = await getContent(locale)
   const response = NextResponse.json({ locale, content })
-  const csrfToken = issueAdminCsrfToken(response)
+  const existingToken = request.cookies.get(ADMIN_CSRF_COOKIE)?.value
+  const csrfToken = existingToken || issueAdminCsrfToken(response)
 
   await writeAdminAuditLog({
     event: 'content_read',
@@ -66,6 +67,7 @@ export async function GET(request: NextRequest) {
     locale,
   })
 
+  response.headers.set('cache-control', 'no-store')
   response.headers.set('x-admin-csrf-token', csrfToken)
   return response
 }
