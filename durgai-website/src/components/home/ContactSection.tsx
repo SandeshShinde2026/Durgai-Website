@@ -10,14 +10,14 @@ export default function ContactSection() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="bg-white scroll-mt-28 pb-16 pt-6 lg:pb-24 lg:pt-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-gray-100 bg-bg-muted p-6 sm:p-8 lg:p-10">
+        <div className="rounded-3xl border border-gray-100 bg-bg-muted p-4 sm:p-8 lg:p-10">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">{t('eyebrow')}</p>
           <h2 id="contact-heading" className="font-heading text-3xl font-extrabold text-text-base sm:text-4xl">
             {t('heading')}
           </h2>
-          <p className="mt-4 max-w-2xl text-text-muted">{t('description')}</p>
+          <p className="mt-3 max-w-2xl text-sm text-text-muted sm:mt-4 sm:text-base">{t('description')}</p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:mt-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl bg-white p-4">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-text-muted">{t('cards.phone')}</p>
               <a href={`tel:${t('phoneRaw')}`} className="inline-flex items-center gap-2 text-text-base hover:text-primary">

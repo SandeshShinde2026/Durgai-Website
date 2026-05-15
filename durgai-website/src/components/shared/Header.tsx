@@ -9,17 +9,34 @@ import { usePathname, useRouter } from '@/i18n/navigation'
 import { routing, type AppLocale } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
-const NAV_LINKS = [
+type NavItem = {
+  key: string
+  href: string
+}
+
+const DEFAULT_NAV_LINKS: NavItem[] = [
   { href: '#impact', key: 'impact' },
   { href: '#about', key: 'about' },
+  { href: '#activities', key: 'activities' },
   { href: '#need-help', key: 'needHelp' },
   { href: '#stories', key: 'stories' },
+  { href: '#leadership', key: 'leadership' },
   { href: '#transparency', key: 'transparency' },
   { href: '#contact', key: 'contact' },
 ]
 
 export default function Header() {
   const t = useTranslations('Header')
+  const rawNavItems = t.raw('navItems')
+  const navLinks = Array.isArray(rawNavItems)
+    ? rawNavItems
+      .filter((item): item is NavItem => typeof item === 'object' && item !== null)
+      .map((item) => ({
+        key: typeof item.key === 'string' ? item.key : '',
+        href: typeof item.href === 'string' ? item.href : '',
+      }))
+      .filter((item) => item.key.trim().length > 0 && item.href.trim().length > 0)
+    : DEFAULT_NAV_LINKS
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
@@ -37,7 +54,10 @@ export default function Header() {
   const getHomeSectionHref = (hash: string) => `/${locale}${hash}`
 
   const localeOptions = routing.locales
-  const sectionHashes = useMemo(() => NAV_LINKS.map((link) => link.href), [])
+  const sectionHashes = useMemo(
+    () => navLinks.map((link) => link.href).filter((href) => href.startsWith('#')),
+    [navLinks],
+  )
 
   const handleLocaleChange = (targetLocale: string) => {
     if (!targetLocale || targetLocale === locale) {
@@ -126,7 +146,7 @@ export default function Header() {
             {/* ── Logo ─────────────────────────────── */}
             <Link
               href={`/${locale}`}
-              className="flex flex-1 items-center gap-2.5 group focus-visible:outline-primary min-w-0 md:flex-none"
+              className="group flex min-w-0 shrink-0 items-center gap-2.5 focus-visible:outline-primary"
               aria-label={t('logoAria')}
             >
               <div className="relative w-9 h-9 sm:w-10 sm:h-10 bg-primary rounded-full flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
@@ -135,37 +155,37 @@ export default function Header() {
               </div>
               <div className="leading-none min-w-0">
                 <p className="font-heading font-bold text-[13px] sm:text-[15px] text-primary truncate">{t('brand.top')}</p>
-                <p className="hidden sm:block font-heading font-medium text-[11px] text-text-muted tracking-wide truncate">
+                <p className="hidden 2xl:block font-heading font-medium text-[11px] text-text-muted tracking-wide truncate">
                   {t('brand.bottom')}
                 </p>
               </div>
             </Link>
 
             {/* ── Desktop nav ──────────────────────── */}
-            <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
-              {NAV_LINKS.map((link) => (
+            <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 px-2 xl:flex 2xl:gap-1" aria-label="Main navigation">
+              {navLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={`${link.key}-${link.href}`}
                   href={getHomeSectionHref(link.href)}
                   aria-current={activeSection === link.href ? 'location' : undefined}
                   className={cn(
-                    'px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200',
+                    'whitespace-nowrap rounded-lg px-2 py-2 text-[13px] font-medium transition-all duration-200 2xl:px-3 2xl:text-sm',
                     activeSection === link.href
                       ? 'text-primary bg-primary/10'
                       : 'text-text-muted hover:text-primary hover:bg-primary/5',
                   )}
                 >
-                  {t(`nav.${link.key}`)}
+                  {t.has(`nav.${link.key}`) ? t(`nav.${link.key}`) : link.key}
                 </Link>
               ))}
             </nav>
 
             {/* ── Language switcher (desktop/tablet) ───────────── */}
-            <div className="hidden md:flex items-center ml-3">
+            <div className="ml-2 hidden shrink-0 items-center md:flex xl:ml-3">
               <label htmlFor="language-switcher-desktop" className="sr-only">
                 {t('language.label')}
               </label>
-              <div className="relative w-[168px]">
+              <div className="relative w-[152px] 2xl:w-[168px]">
                 <select
                   id="language-switcher-desktop"
                   value={locale}
@@ -192,7 +212,7 @@ export default function Header() {
             {/* ── Desktop CTA ──────────────────────── */}
             <Link
               href={getHomeSectionHref('#donate')}
-              className="hidden xl:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0 min-h-[44px]"
+              className="hidden 2xl:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0 min-h-[44px]"
             >
               <Heart className="w-4 h-4 fill-white" />
               {t('donateNow')}
@@ -291,9 +311,9 @@ export default function Header() {
 
               {/* Nav links */}
               <nav className="flex flex-col flex-1 overflow-y-auto px-4 py-4 gap-1">
-                {NAV_LINKS.map((link) => (
+                {navLinks.map((link) => (
                   <Link
-                    key={link.href}
+                    key={`${link.key}-${link.href}`}
                     href={getHomeSectionHref(link.href)}
                     onClick={() => setMenuOpen(false)}
                     aria-current={activeSection === link.href ? 'location' : undefined}
@@ -304,7 +324,7 @@ export default function Header() {
                         : 'text-text-base hover:text-primary hover:bg-bg-warm',
                     )}
                   >
-                    {t(`nav.${link.key}`)}
+                    {t.has(`nav.${link.key}`) ? t(`nav.${link.key}`) : link.key}
                   </Link>
                 ))}
               </nav>

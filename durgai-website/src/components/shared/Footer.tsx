@@ -2,15 +2,22 @@ import Link from 'next/link'
 import { Heart, Phone, Mail, MapPin, Instagram, Facebook, Twitter, Youtube, MessageCircle } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
-const QUICK_LINKS = [
+type FooterLinkItem = {
+  key: string
+  href: string
+}
+
+const QUICK_LINKS: FooterLinkItem[] = [
   { href: '#about', key: 'about' },
   { href: '#impact', key: 'impact' },
+  { href: '#activities', key: 'activities' },
   { href: '#stories', key: 'stories' },
+  { href: '#leadership', key: 'leadership' },
   { href: '#transparency', key: 'transparency' },
   { href: '#need-help', key: 'needHelp' },
 ]
 
-const GET_INVOLVED = [
+const GET_INVOLVED: FooterLinkItem[] = [
   { href: '#donate', key: 'donate' },
   { href: '#volunteer', key: 'volunteer' },
   { href: '#csr', key: 'csr' },
@@ -29,13 +36,34 @@ const TRUST_BADGES = [
   'registeredNgo',
   'approved80g',
   'certified12a',
-  'fcra',
   'razorpaySecured',
 ] as const
 
 export default async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'Footer' })
   const whatsappNumber = '919822880375'
+  const rawQuickLinks = t.raw('quickLinkItems')
+  const rawGetInvolvedLinks = t.raw('getInvolvedItems')
+
+  const quickLinks = Array.isArray(rawQuickLinks)
+    ? rawQuickLinks
+      .filter((item): item is FooterLinkItem => typeof item === 'object' && item !== null)
+      .map((item) => ({
+        key: typeof item.key === 'string' ? item.key : '',
+        href: typeof item.href === 'string' ? item.href : '',
+      }))
+      .filter((item) => item.key.trim().length > 0 && item.href.trim().length > 0)
+    : QUICK_LINKS
+
+  const getInvolvedLinks = Array.isArray(rawGetInvolvedLinks)
+    ? rawGetInvolvedLinks
+      .filter((item): item is FooterLinkItem => typeof item === 'object' && item !== null)
+      .map((item) => ({
+        key: typeof item.key === 'string' ? item.key : '',
+        href: typeof item.href === 'string' ? item.href : '',
+      }))
+      .filter((item) => item.key.trim().length > 0 && item.href.trim().length > 0)
+    : GET_INVOLVED
 
   return (
     <footer className="bg-gray-950 text-gray-300" aria-labelledby="footer-heading">
@@ -82,13 +110,13 @@ export default async function Footer({ locale }: { locale: string }) {
               {t('sections.quickLinks')}
             </h3>
             <ul className="space-y-3">
-              {QUICK_LINKS.map(({ href, key }) => (
-                <li key={href}>
+              {quickLinks.map(({ href, key }) => (
+                <li key={`${key}-${href}`}>
                   <Link
                     href={`/${locale}${href}`}
                     className="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all duration-200"
                   >
-                    {t(`quickLinks.${key}`)}
+                    {t.has(`quickLinks.${key}`) ? t(`quickLinks.${key}`) : key}
                   </Link>
                 </li>
               ))}
@@ -101,13 +129,13 @@ export default async function Footer({ locale }: { locale: string }) {
               {t('sections.getInvolved')}
             </h3>
             <ul className="space-y-3">
-              {GET_INVOLVED.map(({ href, key }) => (
-                <li key={href}>
+              {getInvolvedLinks.map(({ href, key }) => (
+                <li key={`${key}-${href}`}>
                   <Link
                     href={`/${locale}${href}`}
                     className="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all duration-200"
                   >
-                    {t(`getInvolved.${key}`)}
+                    {t.has(`getInvolved.${key}`) ? t(`getInvolved.${key}`) : key}
                   </Link>
                 </li>
               ))}

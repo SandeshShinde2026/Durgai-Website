@@ -81,7 +81,7 @@ export default function StoriesSection() {
             {t('heading.prefix')}{' '}
             <span className="text-gradient">{t('heading.highlight')}</span>
           </motion.h2>
-          <motion.p variants={fadeInUp} className="text-text-muted text-lg max-w-2xl mx-auto">
+          <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-base text-text-muted sm:text-lg">
             {t('description')}
           </motion.p>
           {/* Consent note */}
@@ -111,7 +111,7 @@ export default function StoriesSection() {
                 <motion.article
                   key={story.key}
                   variants={fadeInUp}
-                  className="w-[280px] sm:w-auto bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden card-hover flex flex-col"
+                  className="flex w-[84vw] max-w-[300px] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-card card-hover sm:w-auto sm:max-w-none"
                   aria-label={t('aria.storyCard', { name: story.name })}
                 >
                   {/* Illustration area */}
@@ -160,9 +160,9 @@ export default function StoriesSection() {
                   </div>
 
                   {/* Card body */}
-                  <div className="p-5 flex flex-col flex-1">
+                    <div className="flex flex-1 flex-col p-4 sm:p-5">
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="font-heading font-bold text-text-base text-base">{story.name}</h3>
+                      <h3 className="font-heading text-[15px] font-bold text-text-base sm:text-base">{story.name}</h3>
                       <Quote
                         className="w-5 h-5 text-gray-200 shrink-0 mt-0.5"
                         aria-hidden="true"
@@ -178,7 +178,7 @@ export default function StoriesSection() {
                       </span>
                     </div>
 
-                    <p className="text-sm text-text-muted leading-relaxed flex-1 mb-4">
+                    <p className="mb-4 flex-1 text-sm leading-relaxed text-text-muted">
                       {story.outcome}
                     </p>
 

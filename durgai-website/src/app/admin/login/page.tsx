@@ -35,13 +35,19 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-rose-50 via-white to-orange-50 px-4 py-8">
+      <div aria-hidden="true" className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-orange-200/40 blur-3xl" />
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+        className="relative w-full max-w-md rounded-3xl border border-white/70 bg-white/95 p-7 shadow-[0_24px_80px_rgba(229,57,53,0.14)] backdrop-blur"
       >
-        <h1 className="font-heading text-2xl font-bold text-slate-900">Admin Login</h1>
-        <p className="mt-2 text-sm text-slate-600">
+        <div className="mb-4 inline-flex items-center rounded-full border border-primary/15 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
+          Secure admin access
+        </div>
+
+        <h1 className="font-heading text-3xl font-bold text-slate-900">Admin Login</h1>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
           Sign in to edit all sections and locale content.
         </p>
 
@@ -55,7 +61,7 @@ export default function AdminLoginPage() {
               type="text"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              className="h-11 w-full rounded-lg border border-slate-300 px-3 text-sm text-slate-900 outline-none focus:border-primary"
+              className="h-11 w-full rounded-xl border border-slate-300 bg-white px-3 text-sm text-slate-900 outline-none ring-primary/20 transition-all focus:border-primary focus:ring-2"
               autoComplete="username"
               required
             />
@@ -70,19 +76,23 @@ export default function AdminLoginPage() {
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              className="h-11 w-full rounded-lg border border-slate-300 px-3 text-sm text-slate-900 outline-none focus:border-primary"
+              className="h-11 w-full rounded-xl border border-slate-300 bg-white px-3 text-sm text-slate-900 outline-none ring-primary/20 transition-all focus:border-primary focus:ring-2"
               autoComplete="current-password"
               required
             />
           </div>
         </div>
 
-        {error && <p className="mt-3 text-sm font-medium text-red-600">{error}</p>}
+        {error && (
+          <p className="mt-3 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm font-medium text-red-700">
+            {error}
+          </p>
+        )}
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-6 h-11 w-full rounded-lg bg-primary text-sm font-bold text-white transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-6 h-11 w-full rounded-xl bg-primary text-sm font-bold text-white shadow-md shadow-primary/25 transition hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? 'Signing in...' : 'Sign in'}
         </button>

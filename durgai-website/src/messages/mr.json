@@ -23,7 +23,9 @@
       "impact": "आमचा प्रभाव",
       "stories": "कथा",
       "transparency": "पारदर्शकता",
-      "contact": "संपर्क"
+      "contact": "संपर्क",
+      "activities": "उपक्रम",
+      "leadership": "नेतृत्व"
     },
     "donateNow": "आताच देणगी द्या",
     "menu": {
@@ -44,7 +46,41 @@
         "hi": "हिंदी",
         "mr": "मराठी"
       }
-    }
+    },
+    "navItems": [
+      {
+        "key": "impact",
+        "href": "#impact"
+      },
+      {
+        "key": "about",
+        "href": "#about"
+      },
+      {
+        "key": "activities",
+        "href": "#activities"
+      },
+      {
+        "key": "needHelp",
+        "href": "#need-help"
+      },
+      {
+        "key": "stories",
+        "href": "#stories"
+      },
+      {
+        "key": "leadership",
+        "href": "#leadership"
+      },
+      {
+        "key": "transparency",
+        "href": "#transparency"
+      },
+      {
+        "key": "contact",
+        "href": "#contact"
+      }
+    ]
   },
   "Footer": {
     "aria": {
@@ -55,7 +91,7 @@
       "top": "दुर्गाई हृदय",
       "bottom": "प्रतिष्ठान"
     },
-    "description": "०–१३ वयोगटातील मुलांसाठी मोफत हृदय तपासणी आणि जीवनरक्षक शस्त्रक्रिया. नोंदणीकृत NGO | ८०G | १२A | FCRA प्रमाणित.",
+    "description": "०-१२ वयोगटातील मुलांसाठी मोफत हृदय तपासणी आणि जीवनरक्षक शस्त्रक्रिया. नोंदणीकृत NGO | ८०G | १२A प्रमाणित.",
     "sections": {
       "quickLinks": "जलद दुवे",
       "getInvolved": "सहभागी व्हा",
@@ -87,7 +123,6 @@
       "registeredNgo": "नोंदणीकृत NGO",
       "approved80g": "८०G मंजूर",
       "certified12a": "१२A प्रमाणित",
-      "fcra": "FCRA",
       "razorpaySecured": "Razorpay सुरक्षित"
     },
     "bottom": {
@@ -99,7 +134,59 @@
     "medicalDisclaimer": {
       "title": "वैद्यकीय अस्वीकरण:",
       "body": "या वेबसाइटवरील माहिती फक्त सामान्य जागरूकतेसाठी आहे आणि ती वैद्यकीय सल्ला नाही. वैद्यकीय आपत्कालीन परिस्थितीत कृपया पात्र आरोग्यतज्ज्ञांशी संपर्क साधा किंवा त्वरित १०८ वर कॉल करा."
-    }
+    },
+    "quickLinkItems": [
+      {
+        "key": "about",
+        "href": "#about"
+      },
+      {
+        "key": "impact",
+        "href": "#impact"
+      },
+      {
+        "key": "activities",
+        "href": "#activities"
+      },
+      {
+        "key": "stories",
+        "href": "#stories"
+      },
+      {
+        "key": "leadership",
+        "href": "#leadership"
+      },
+      {
+        "key": "transparency",
+        "href": "#transparency"
+      },
+      {
+        "key": "needHelp",
+        "href": "#need-help"
+      }
+    ],
+    "getInvolvedItems": [
+      {
+        "key": "donate",
+        "href": "#donate"
+      },
+      {
+        "key": "volunteer",
+        "href": "#volunteer"
+      },
+      {
+        "key": "csr",
+        "href": "#csr"
+      },
+      {
+        "key": "camp",
+        "href": "#camps"
+      },
+      {
+        "key": "contact",
+        "href": "#contact"
+      }
+    ]
   },
   "FloatingDonateButton": {
     "aria": {
@@ -114,7 +201,7 @@
       "section": "हीरो विभाग",
       "animatedHeart": "अॅनिमेटेड हृदय"
     },
-    "eyebrow": "दुर्गाई हृदय प्रतिष्ठान · स्थापना २०२०",
+    "eyebrow": "दुर्गाई हृदय प्रतिष्ठान · स्थापना २००७",
     "heading": {
       "line1": "प्रत्येक हृदयाला",
       "highlight1": "हक्क आहे",
@@ -123,7 +210,7 @@
     },
     "subtext": {
       "before": "मुलांसाठी मोफत हृदय तपासणी आणि जीवनरक्षक शस्त्रक्रिया, वयोगट",
-      "age": "०–१३",
+      "age": "०-१२",
       "after": "। उपचारयोग्य हृदय आजारामुळे कोणत्याही कुटुंबाने आपले मूल गमावू नये."
     },
     "cta": {
@@ -131,8 +218,8 @@
       "secondary": "आमचा प्रभाव पाहा"
     },
     "socialProof": {
-      "highlight": "१,२००+ मुले",
-      "text": "उपचार मिळाले आहेत"
+      "highlight": "३४५ मुले",
+      "text": "हृदय शस्त्रक्रियेसाठी समर्थित"
     },
     "socialProofAvatars": [
       {
@@ -160,10 +247,25 @@
       "camps": "आरोग्य शिबिरे"
     },
     "cardStatValues": {
-      "children": "१,२००+",
-      "surgeries": "३००+",
-      "camps": "५०+"
+      "children": "३४५",
+      "surgeries": "३४५",
+      "camps": "१६ वर्षे"
     },
+    "mobileBackgroundImageUrl": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80",
+    "mobileBackgroundSlides": [
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80",
+        "caption": "विश्वासार्ह रुग्णालयांच्या मदतीने मुलांसाठी जीवनरक्षक हृदय शस्त्रक्रिया"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1400&q=80",
+        "caption": "लवकर निदानासाठी हृदय तपासणी शिबिरे, योग्य वेळी उपचाराची संधी"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1400&q=80",
+        "caption": "कुटुंबांना पारदर्शक आणि संवेदनशील मदत, उपचार प्रवासात पूर्ण साथ"
+      }
+    ],
     "cardImageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg",
     "imagePlaceholder": "अॅडमिनमधून प्रतिमा अपलोड करा",
     "floatingBadge": {
@@ -196,13 +298,9 @@
         "label": "१२A प्रमाणित",
         "sub": "आयकर"
       },
-      "fcraApproved": {
-        "label": "FCRA मंजूर",
-        "sub": "परकीय अनुदान"
-      },
       "partnerHospitals": {
-        "label": "८ भागीदार रुग्णालये",
-        "sub": "संपूर्ण महाराष्ट्रात"
+        "label": "इनलॅक्स + बुधरानी",
+        "sub": "रुग्णालय सहकार्य"
       },
       "razorpaySecured": {
         "label": "Razorpay सुरक्षित",
@@ -213,8 +311,8 @@
         "sub": "Schedule VII"
       },
       "childrenTreated": {
-        "label": "१,२००+ मुले",
-        "sub": "२०२० पासून उपचारित"
+        "label": "३४५ मुलांना मदत",
+        "sub": "२००७ पासून हृदय मदत"
       }
     }
   },
@@ -230,28 +328,28 @@
     },
     "stats": {
       "children": {
-        "value": 1200,
-        "suffix": "+",
+        "value": 345,
+        "suffix": "",
         "label": "उपचारित मुले",
-        "description": "महाराष्ट्रभर मोफत हृदय तपासण्या दिल्या"
+        "description": "हृदय शस्त्रक्रियेसाठी मदत मिळालेली मुले"
       },
       "surgeries": {
-        "value": 300,
-        "suffix": "+",
+        "value": 345,
+        "suffix": "",
         "label": "अर्थसहाय्यित शस्त्रक्रिया",
-        "description": "देणगीदारांच्या मदतीने जीवनरक्षक प्रक्रिया"
+        "description": "हृदय शस्त्रक्रिया मदत वितरित"
       },
       "camps": {
-        "value": 50,
+        "value": 16,
         "suffix": "+",
         "label": "मोफत आरोग्य शिबिरे",
-        "description": "ग्रामीण भागात समुदाय स्क्रीनिंग उपक्रम"
+        "description": "सलग हृदय तपासणी शिबिरांची वर्षे"
       },
       "hospitals": {
-        "value": 8,
+        "value": 2,
         "suffix": "",
-        "label": "भागीदार रुग्णालये",
-        "description": "५ जिल्ह्यांमध्ये सूचीबद्ध रुग्णालये"
+        "label": "मुख्य रुग्णालय भागीदार",
+        "description": "इनलॅक्स आणि बुधरानी, पुणे"
       }
     }
   },
@@ -266,9 +364,9 @@
       "tagline": "करुणेसह हृदयसेवा"
     },
     "statValues": {
-      "yearsOfService": "४",
-      "districtsServed": "५",
-      "chargedToPatients": "₹०"
+      "yearsOfService": "१९+",
+      "districtsServed": "महाराष्ट्र",
+      "chargedToPatients": "₹२०.१५ लाख मदत"
     },
     "stats": {
       "yearsOfService": "सेवेची वर्षे",
@@ -277,15 +375,15 @@
     },
     "quote": {
       "text": "ज्या हृदय आजारावर उपचार शक्य आहेत, त्यासाठी कोणत्याही मुलाचा जीव जाऊ नये.",
-      "author": "— डॉ. प्रिया जोशी, संस्थापक"
+      "author": "— सीमा राजेंद्र शिंदे, खजिनदार"
     },
     "eyebrow": "आम्ही कोण",
     "heading": {
       "prefix": "प्रत्येक मुलासाठी एक हृदय —",
       "highlight": "कोणताही अपवाद नाही"
     },
-    "paragraph1": "२०२० मध्ये स्थापन झालेले दुर्गाई हृदय प्रतिष्ठान हे नोंदणीकृत NGO असून महाराष्ट्रातील कोणत्याही कुटुंबाने पैशाअभावी आपल्या मुलाला जन्मजात किंवा प्राप्त हृदय आजारामुळे गमावू नये यासाठी कार्यरत आहे.",
-    "paragraph2": "आम्ही ग्रामीण भागात मोफत हृदय तपासणी शिबिरे आयोजित करतो, निदान झालेल्या मुलांना सूचीबद्ध रुग्णालयांशी जोडतो आणि अंशतः किंवा पूर्ण शस्त्रक्रिया खर्च उचलतो — हे सर्व तुमच्यासारख्या देणगीदारांच्या उदारतेमुळे शक्य आहे.",
+    "paragraph1": "२००७ मध्ये स्थापन झालेल्या दुर्गाई हृदय प्रतिष्ठानतर्फे महाराष्ट्रभर हृदयविकारग्रस्त मुलांना, विशेषतः आर्थिक अडचणीत असलेल्या कुटुंबांना मदत केली जाते.",
+    "paragraph2": "ही संस्था बालहृदय शस्त्रक्रिया मदत, दीर्घकालीन तपासणी शिबिरे आणि संवेदनशील सामाजिक साहाय्य पारदर्शकतेने करत आहे.",
     "mission": {
       "title": "आमचे ध्येय",
       "body": "महाराष्ट्रातील वंचित मुलांना (०–१३) मोफत हृदयसेवा उपलब्ध करून देणे."
@@ -315,8 +413,8 @@
     "photoConsentTag": "पालक संमतीसह फोटो",
     "fundedBy": "सहाय्य दिले",
     "waitingList": {
-      "highlight": "४७ मुले",
-      "text": "सध्या आमच्या प्रतीक्षा यादीत आहेत."
+      "highlight": "सतत मदत",
+      "text": "बालहृदय मदतीसाठी कोणताही कॉल आला की मदत केली जाते."
     },
     "cta": "पुढच्या मुलाला मदत करा",
     "stories": {
@@ -351,40 +449,40 @@
     },
     "items": [
       {
-        "key": "arjun",
-        "name": "अर्जुन, ४ वर्षे",
-        "location": "सोलापूर, महाराष्ट्र",
-        "condition": "व्हेंट्रिक्युलर सेप्टल डिफेक्ट (VSD)",
-        "outcome": "यशस्वी शस्त्रक्रियेनंतर आता निरोगी आणि खेळकर.",
-        "fundedBy": "४ देणगीदार कुटुंबे",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "sandhya",
+        "name": "कु. संध्या शिंदे, वय ७",
+        "location": "आंबोली, खेड तालुका",
+        "condition": "बालहृदय विकार",
+        "outcome": "प्रतिष्ठानमार्फत मोफत शस्त्रक्रिया मदत मिळाली.",
+        "fundedBy": "प्रतिष्ठान निधी",
+        "imageUrl": ""
       },
       {
-        "key": "kavya",
-        "name": "काव्या, ७ वर्षे",
-        "location": "नाशिक, महाराष्ट्र",
-        "condition": "टेट्रालॉजी ऑफ फॅलट (ToF)",
-        "outcome": "भागीदार रुग्णालयातील शस्त्रक्रियेनंतर पूर्ण बरे.",
-        "fundedBy": "१ CSR प्रायोजक",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "kajal",
+        "name": "कु. काजल सातकर, वय १२",
+        "location": "सातकरवाडी, खेड तालुका",
+        "condition": "बालहृदय विकार",
+        "outcome": "हृदय शस्त्रक्रिया मदत व पुढील साहाय्य मिळाले.",
+        "fundedBy": "देणगीदार व विश्वस्त",
+        "imageUrl": ""
       },
       {
-        "key": "rohan",
-        "name": "रोहन, २ वर्षे",
-        "location": "कोल्हापूर, महाराष्ट्र",
-        "condition": "पेटंट डक्टस आर्टेरिओसस (PDA)",
-        "outcome": "कॅथेटर क्लोजर यशस्वी. ३ दिवसांत डिस्चार्ज.",
-        "fundedBy": "६ वैयक्तिक देणगीदार",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "tejas",
+        "name": "कुमार तेजस शिंदे, वय १२",
+        "location": "पाळू, खेड तालुका",
+        "condition": "बालहृदय विकार",
+        "outcome": "दुर्गम भागातील मोफत सहाय्य कार्यक्रमात समावेश.",
+        "fundedBy": "प्रतिष्ठान निधी",
+        "imageUrl": ""
       },
       {
-        "key": "sana",
-        "name": "सना, ९ वर्षे",
-        "location": "लातूर, महाराष्ट्र",
-        "condition": "र्‍ह्युमॅटिक हृदयरोग",
-        "outcome": "व्हॉल्व्ह रिपेअर यशस्वी. आता शाळेत परतली आहे.",
-        "fundedBy": "समुदाय निधी संकलन",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "ayush",
+        "name": "कुमार आयुष पोखरकर, वय ४",
+        "location": "देशमुखवाडी, खेड तालुका",
+        "condition": "बालहृदय विकार",
+        "outcome": "देणगीदारांच्या मदतीने शस्त्रक्रियेसाठी सहाय्य.",
+        "fundedBy": "देणगी नेटवर्क",
+        "imageUrl": ""
       }
     ]
   },
@@ -451,7 +549,6 @@
       "items": {
         "annualReport": "वार्षिक अहवाल २०२३–२४",
         "auditedAccounts": "लेखा तपासणी अहवाल २०२३–२४",
-        "fcraCertificate": "FCRA प्रमाणपत्र",
         "csrImpact": "CSR प्रभाव अहवाल"
       }
     },
@@ -619,5 +716,63 @@
       },
       "contact": "परतावा सहाय्यासाठी तुमचे व्यवहार तपशीलासह help@durgaihruday.org वर लिहा."
     }
+  },
+  "MajorActivities": {
+    "eyebrow": "मुख्य उपक्रम",
+    "heading": {
+      "prefix": "शस्त्रक्रियेपलीकडे: ",
+      "highlight": "समाजसेवा"
+    },
+    "description": "चाकण आणि खेड परिसरात आरोग्य, आपत्कालीन मदत, लसीकरण आणि सामाजिक कल्याणासाठी प्रतिष्ठानने सातत्याने कार्य केले आहे.",
+    "items": [
+      {
+        "title": "हृदय शिबिरे (१६ वर्षे)",
+        "body": "२००७ पासून भागीदार रुग्णालयांसह मोफत व सवलतीच्या तपासणी शिबिरांचे आयोजन."
+      },
+      {
+        "title": "कोविड मदत",
+        "body": "PPE किट, मास्क, सॅनिटायझर, किराणा किट, अन्नवाटप आणि रुग्णालय समन्वय."
+      },
+      {
+        "title": "लसीकरण सहाय्य",
+        "body": "ज्येष्ठांसाठी वाहतूक, ५०,००० सिरींज पुरवठा आणि ३५० नागरिकांना शिबिर सहाय्य."
+      },
+      {
+        "title": "संस्थापक स्मरण सामाजिक कार्य",
+        "body": "दर महिन्याच्या १४ तारखेला शाळा-रुग्णालय सहाय्य, पुस्तके, गणवेश व गरजेच्या वस्तूंचे वाटप."
+      }
+    ]
+  },
+  "Leadership": {
+    "eyebrow": "नेतृत्व",
+    "heading": {
+      "prefix": "आमची ",
+      "highlight": "मुख्य टीम"
+    },
+    "description": "दुर्गाई हृदय प्रतिष्ठान, चाकणचे पदाधिकारी व विश्वस्त.",
+    "members": [
+      "श्री. दत्तात्रय रामचंद्र भेगडे - अध्यक्ष (+91 9922161333)",
+      "श्री. संजय दत्तात्रय शिंदे - कार्याध्यक्ष (+91 9850909149)",
+      "सौ. मीना संजय शिंदे - उपाध्यक्ष (+91 9850908964)",
+      "श्री. राजेंद्र दत्तात्रय शिंदे - सचिव (+91 9822880375)",
+      "सौ. सीमा राजेंद्र शिंदे - खजिनदार (+91 7038122343)",
+      "श्री. शामराव बबनराव पवार - मा. अध्यक्ष (+91 9860892967)",
+      "विश्वस्त: महेश सोनावणे, सांगाती शिंदे, अंकुश डोंगरे, प्रशांत गोलांडे, नाझीम सिकीलकर, प्रशांत रासकर, रोनक गोरे"
+    ]
+  },
+  "HomePage": {
+    "sectionOrder": [
+      "hero",
+      "trust",
+      "impact",
+      "about",
+      "activities",
+      "howYouCanHelp",
+      "stories",
+      "leadership",
+      "transparency",
+      "donation",
+      "contact"
+    ]
   }
 }

@@ -23,7 +23,9 @@
       "impact": "Our Impact",
       "stories": "Stories",
       "transparency": "Transparency",
-      "contact": "Contact"
+      "contact": "Contact",
+      "activities": "Activities",
+      "leadership": "Leadership"
     },
     "donateNow": "Donate Now",
     "menu": {
@@ -44,7 +46,41 @@
         "hi": "Hindi",
         "mr": "Marathi"
       }
-    }
+    },
+    "navItems": [
+      {
+        "key": "impact",
+        "href": "#impact"
+      },
+      {
+        "key": "about",
+        "href": "#about"
+      },
+      {
+        "key": "activities",
+        "href": "#activities"
+      },
+      {
+        "key": "needHelp",
+        "href": "#need-help"
+      },
+      {
+        "key": "stories",
+        "href": "#stories"
+      },
+      {
+        "key": "leadership",
+        "href": "#leadership"
+      },
+      {
+        "key": "transparency",
+        "href": "#transparency"
+      },
+      {
+        "key": "contact",
+        "href": "#contact"
+      }
+    ]
   },
   "Footer": {
     "aria": {
@@ -55,7 +91,7 @@
       "top": "Durgai Hruday",
       "bottom": "Prathisthan"
     },
-    "description": "Free heart checkups and life-saving surgeries for children aged 0–13. Registered NGO | 80G | 12A | FCRA certified.",
+    "description": "Free heart checkups and life-saving surgeries for children aged 0-12. Registered NGO | 80G | 12A certified.",
     "sections": {
       "quickLinks": "Quick Links",
       "getInvolved": "Get Involved",
@@ -87,7 +123,6 @@
       "registeredNgo": "Reg. NGO",
       "approved80g": "80G Approved",
       "certified12a": "12A Certified",
-      "fcra": "FCRA",
       "razorpaySecured": "Razorpay Secured"
     },
     "bottom": {
@@ -99,7 +134,59 @@
     "medicalDisclaimer": {
       "title": "Medical Disclaimer:",
       "body": "Information on this website is provided for general awareness only and does not constitute medical advice. For any medical emergency, please contact a qualified healthcare professional or dial 108 immediately."
-    }
+    },
+    "quickLinkItems": [
+      {
+        "key": "about",
+        "href": "#about"
+      },
+      {
+        "key": "impact",
+        "href": "#impact"
+      },
+      {
+        "key": "activities",
+        "href": "#activities"
+      },
+      {
+        "key": "stories",
+        "href": "#stories"
+      },
+      {
+        "key": "leadership",
+        "href": "#leadership"
+      },
+      {
+        "key": "transparency",
+        "href": "#transparency"
+      },
+      {
+        "key": "needHelp",
+        "href": "#need-help"
+      }
+    ],
+    "getInvolvedItems": [
+      {
+        "key": "donate",
+        "href": "#donate"
+      },
+      {
+        "key": "volunteer",
+        "href": "#volunteer"
+      },
+      {
+        "key": "csr",
+        "href": "#csr"
+      },
+      {
+        "key": "camp",
+        "href": "#camps"
+      },
+      {
+        "key": "contact",
+        "href": "#contact"
+      }
+    ]
   },
   "FloatingDonateButton": {
     "aria": {
@@ -114,7 +201,7 @@
       "section": "Hero",
       "animatedHeart": "Animated heart"
     },
-    "eyebrow": "Durgai Hruday Prathisthan · Est. 2020",
+    "eyebrow": "Durgai Hruday Prathisthan · Est. 2007",
     "heading": {
       "line1": "Every Heart",
       "highlight1": "Deserves",
@@ -123,7 +210,7 @@
     },
     "subtext": {
       "before": "Free heart checkups & life-saving surgeries for children aged",
-      "age": "0–13",
+      "age": "0-12",
       "after": ". No family should lose a child to a preventable heart condition."
     },
     "cta": {
@@ -131,8 +218,8 @@
       "secondary": "See Our Impact"
     },
     "socialProof": {
-      "highlight": "1,200+ children",
-      "text": "have received care"
+      "highlight": "345 children",
+      "text": "supported for heart surgery"
     },
     "socialProofAvatars": [
       {
@@ -160,10 +247,25 @@
       "camps": "Health Camps"
     },
     "cardStatValues": {
-      "children": "1,200+",
-      "surgeries": "300+",
-      "camps": "50+"
+      "children": "345",
+      "surgeries": "345",
+      "camps": "16 yrs"
     },
+    "mobileBackgroundImageUrl": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80",
+    "mobileBackgroundSlides": [
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80",
+        "caption": "Life-saving pediatric heart surgeries with trusted partner hospitals"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1400&q=80",
+        "caption": "Early diagnosis camps so children get treatment at the right time"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1400&q=80",
+        "caption": "Families supported end-to-end with transparent and compassionate care"
+      }
+    ],
     "cardImageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg",
     "imagePlaceholder": "Upload image from admin",
     "floatingBadge": {
@@ -196,13 +298,9 @@
         "label": "12A Certified",
         "sub": "Income Tax"
       },
-      "fcraApproved": {
-        "label": "FCRA Approved",
-        "sub": "Foreign contributions"
-      },
       "partnerHospitals": {
-        "label": "8 Partner Hospitals",
-        "sub": "Across Maharashtra"
+        "label": "Inlaks + Budhrani",
+        "sub": "Hospital collaborators"
       },
       "razorpaySecured": {
         "label": "Razorpay Secured",
@@ -213,8 +311,8 @@
         "sub": "Schedule VII"
       },
       "childrenTreated": {
-        "label": "1,200+ Children",
-        "sub": "Treated since 2020"
+        "label": "345 Children Supported",
+        "sub": "Heart surgery aid since 2007"
       }
     }
   },
@@ -230,28 +328,28 @@
     },
     "stats": {
       "children": {
-        "value": 1200,
-        "suffix": "+",
+        "value": 345,
+        "suffix": "",
         "label": "Children Treated",
-        "description": "Free heart checkups provided across Maharashtra"
+        "description": "Children supported for heart surgery"
       },
       "surgeries": {
-        "value": 300,
-        "suffix": "+",
+        "value": 345,
+        "suffix": "",
         "label": "Surgeries Funded",
-        "description": "Life-saving procedures supported by donor contributions"
+        "description": "Heart surgery assistance delivered"
       },
       "camps": {
-        "value": 50,
+        "value": 16,
         "suffix": "+",
         "label": "Free Health Camps",
-        "description": "Community screening events held in rural areas"
+        "description": "Years of sustained heart health camps"
       },
       "hospitals": {
-        "value": 8,
+        "value": 2,
         "suffix": "",
-        "label": "Partner Hospitals",
-        "description": "Empanelled hospitals across 5 districts"
+        "label": "Core Hospital Partners",
+        "description": "Inlaks and Budhrani, Pune"
       }
     }
   },
@@ -266,9 +364,9 @@
       "tagline": "Heart care with compassion"
     },
     "statValues": {
-      "yearsOfService": "4",
-      "districtsServed": "5",
-      "chargedToPatients": "₹0"
+      "yearsOfService": "19+",
+      "districtsServed": "Maharashtra",
+      "chargedToPatients": "₹20.15L aid"
     },
     "stats": {
       "yearsOfService": "Years of service",
@@ -277,15 +375,15 @@
     },
     "quote": {
       "text": "No child should die from a heart condition that could have been treated.",
-      "author": "— Rajendra Shinde , Founder"
+      "author": "— Seema Rajendra Shinde, Treasurer"
     },
     "eyebrow": "Who We Are",
     "heading": {
       "prefix": "A Heart for Every Child —",
       "highlight": "No Exceptions"
     },
-    "paragraph1": "Founded in 2020, Durgai Hruday Prathisthan is a registered NGO dedicated to ensuring that no family in Maharashtra loses a child to a congenital or acquired heart condition due to lack of money.",
-    "paragraph2": "We organise free mass cardiac screening camps in rural areas, connect diagnosed children with empanelled hospitals, and fund partial or complete surgical costs — all through the generosity of donors like you.",
+    "paragraph1": "Established in 2007, Durgai Hruday Prathisthan supports children with heart conditions across Maharashtra, especially families facing financial hardship.",
+    "paragraph2": "The trust funds child heart surgeries, runs long-term camps, and delivers emergency social support with compassion and accountability.",
     "mission": {
       "title": "Our Mission",
       "body": "Provide free cardiac care to underprivileged children (0–13) across Maharashtra."
@@ -315,8 +413,8 @@
     "photoConsentTag": "",
     "fundedBy": "Funded by",
     "waitingList": {
-      "highlight": "47 children",
-      "text": "are currently on our waiting list."
+      "highlight": "Ongoing support",
+      "text": "is provided whenever a child-heart assistance call is received."
     },
     "cta": "Help the Next Child",
     "stories": {
@@ -351,40 +449,40 @@
     },
     "items": [
       {
-        "key": "arjun",
-        "name": "Arjun, 4 yrs",
-        "location": "Solapur, Maharashtra",
-        "condition": "Ventricular Septal Defect (VSD)",
-        "outcome": "Successfully operated. Now a healthy, playful child.",
-        "fundedBy": "4 donor families",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "sandhya",
+        "name": "Sandhya Shinde, 7 yrs",
+        "location": "Amboli, Khed Taluka",
+        "condition": "Paediatric heart condition",
+        "outcome": "Received free surgery support through the trust.",
+        "fundedBy": "Trust fund",
+        "imageUrl": ""
       },
       {
-        "key": "kavya",
-        "name": "Kavya, 7 yrs",
-        "location": "Nashik, Maharashtra",
-        "condition": "Tetralogy of Fallot (ToF)",
-        "outcome": "Full recovery after corrective surgery at a partner hospital.",
-        "fundedBy": "1 CSR sponsor",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "kajal",
+        "name": "Kajal Satkar, 12 yrs",
+        "location": "Satkarwadi, Khed Taluka",
+        "condition": "Paediatric heart condition",
+        "outcome": "Received heart surgery aid and follow-up support.",
+        "fundedBy": "Donors and trustees",
+        "imageUrl": ""
       },
       {
-        "key": "rohan",
-        "name": "Rohan, 2 yrs",
-        "location": "Kolhapur, Maharashtra",
-        "condition": "Patent Ductus Arteriosus (PDA)",
-        "outcome": "Underwent catheter closure. Discharged in 3 days.",
-        "fundedBy": "6 individual donors",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "tejas",
+        "name": "Tejas Shinde, 12 yrs",
+        "location": "Palu, Khed Taluka",
+        "condition": "Paediatric heart condition",
+        "outcome": "Included in the free support program for rural children.",
+        "fundedBy": "Trust fund",
+        "imageUrl": ""
       },
       {
-        "key": "sana",
-        "name": "Sana, 9 yrs",
-        "location": "Latur, Maharashtra",
-        "condition": "Rheumatic Heart Disease",
-        "outcome": "Valve repair done. Back in school and thriving.",
-        "fundedBy": "Community fundraiser",
-        "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguATGv5ZaXH2S-MszjrbCo8h-A6OFWZszC5JJzQBo4yhsgd0XPyR1VCpYmSXTndMne-mulKZf9feSvKidleEyAHxNrfTZy8MDBlzsgH8y-NB1qUTmBHGh4x-SOr_0TUHTmRxcshMlb2YD7nMul5S302t00liZkSe6fez6v3t7cDOSHxJuJPszmqYn1HWcF/s16000/WhatsApp%20Image%202026-03-18%20at%2022.58.47.jpeg"
+        "key": "ayush",
+        "name": "Ayush Pokharkar, 4 yrs",
+        "location": "Deshmukhwadi, Khed Taluka",
+        "condition": "Paediatric heart condition",
+        "outcome": "Supported for surgery through donor-backed aid.",
+        "fundedBy": "Donor network",
+        "imageUrl": ""
       }
     ]
   },
@@ -451,7 +549,6 @@
       "items": {
         "annualReport": "Annual Report 2023–24",
         "auditedAccounts": "Audited Accounts 2023–24",
-        "fcraCertificate": "FCRA Certificate",
         "csrImpact": "CSR Impact Report"
       }
     },
@@ -619,5 +716,63 @@
       },
       "contact": "For refund assistance, write to help@durgaihruday.org with your transaction details."
     }
+  },
+  "MajorActivities": {
+    "eyebrow": "Major Activities",
+    "heading": {
+      "prefix": "Beyond Surgery: ",
+      "highlight": "Community Service"
+    },
+    "description": "The trust has worked consistently in health, emergency response, vaccination, and social welfare across Chakan and Khed regions.",
+    "items": [
+      {
+        "title": "Heart Camps (16 Years)",
+        "body": "Free and subsidized checkup camps organized continuously since 2007 with partner hospitals."
+      },
+      {
+        "title": "COVID Relief",
+        "body": "PPE kits, masks, sanitizers, ration kits, food distribution, hospital coordination, and emergency support."
+      },
+      {
+        "title": "Vaccination Support",
+        "body": "Transport support for seniors, 50,000 syringes supplied, and 350 citizens vaccinated in camp support."
+      },
+      {
+        "title": "Founder Memorial Social Work",
+        "body": "Monthly welfare activities on the 14th including school and hospital support, books, uniforms, and essentials."
+      }
+    ]
+  },
+  "Leadership": {
+    "eyebrow": "Leadership",
+    "heading": {
+      "prefix": "Meet the ",
+      "highlight": "Core Team"
+    },
+    "description": "Office bearers and trustees of Durgai Hruday Prathisthan, Chakan.",
+    "members": [
+      "Shri Dattatray Ramchandra Bhegade - President (+91 9922161333)",
+      "Shri Sanjay Dattatray Shinde - Working President (+91 9850909149)",
+      "Sau. Meena Sanjay Shinde - Vice President (+91 9850908964)",
+      "Shri Rajendra Dattatray Shinde - Secretary (+91 9822880375)",
+      "Sau. Seema Rajendra Shinde - Treasurer (+91 7038122343)",
+      "Shri Shamrao Babanrao Pawar - Former President (+91 9860892967)",
+      "Trustees: Mahesh Sonawane, Sangati Shinde, Ankush Dongre, Prashant Golande, Nazim Sikilkar, Prashant Raskar, Ronak Gore"
+    ]
+  },
+  "HomePage": {
+    "sectionOrder": [
+      "hero",
+      "trust",
+      "impact",
+      "about",
+      "activities",
+      "howYouCanHelp",
+      "stories",
+      "leadership",
+      "transparency",
+      "donation",
+      "contact"
+    ]
   }
 }

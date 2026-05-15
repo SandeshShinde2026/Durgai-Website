@@ -145,7 +145,7 @@ export default function ImpactStats() {
             {t('heading.prefix')}{' '}
             <span className="text-gradient">{t('heading.highlight')}</span>
           </motion.h2>
-          <motion.p variants={fadeInUp} className="text-text-muted text-lg max-w-2xl mx-auto">
+          <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-base text-text-muted sm:text-lg">
             {t('description')}
           </motion.p>
         </motion.div>
@@ -156,7 +156,7 @@ export default function ImpactStats() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.08 }}
-          className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4"
         >
           {STATS.map(({ key, icon: Icon, defaultValue, defaultSuffix, color, iconBg, iconColor }) => {
             void color
@@ -170,13 +170,13 @@ export default function ImpactStats() {
                 className="text-center flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center mb-5`}>
+                <div className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${iconBg} sm:mb-5 sm:h-12 sm:w-12`}>
                   <Icon className={`w-6 h-6 ${iconColor}`} aria-hidden="true" />
                 </div>
 
                 {/* Value */}
                 <p
-                  className="font-heading text-4xl font-extrabold text-text-base mb-1"
+                  className="mb-1 font-heading text-3xl font-extrabold text-text-base sm:text-4xl"
                   aria-label={t('aria.statValue', {
                     value: `${value}${suffix}`,
                     label: t(`stats.${key}.label`),
@@ -186,10 +186,10 @@ export default function ImpactStats() {
                 </p>
 
                 {/* Label */}
-                <p className="font-heading font-bold text-text-base text-base mb-2">{t(`stats.${key}.label`)}</p>
+                <p className="mb-1.5 text-sm font-heading font-bold text-text-base sm:text-base">{t(`stats.${key}.label`)}</p>
 
                 {/* Description */}
-                <p className="text-text-muted text-sm leading-relaxed">{t(`stats.${key}.description`)}</p>
+                <p className="text-xs leading-relaxed text-text-muted sm:text-sm">{t(`stats.${key}.description`)}</p>
               </motion.div>
             )
           })}

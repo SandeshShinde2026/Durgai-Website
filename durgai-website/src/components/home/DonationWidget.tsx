@@ -118,20 +118,20 @@ export default function DonationWidget() {
               ))}
             </div>
 
-            <form onSubmit={handleDonate} className="p-6 sm:p-8 space-y-6">
+            <form onSubmit={handleDonate} className="space-y-5 p-4 sm:space-y-6 sm:p-8">
               {/* ── Preset chips ──────────────────── */}
               <fieldset>
                 <legend className="text-sm font-heading font-semibold text-text-base mb-3">
                   {t('amount.choose')}
                 </legend>
-                <div className="grid grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
                   {PRESET_AMOUNTS.map((amount) => (
                     <button
                       key={amount}
                       type="button"
                       onClick={() => handlePresetClick(amount)}
                       className={cn(
-                        'rounded-xl py-3 px-2 text-sm font-heading font-semibold transition-all duration-200 border-2 min-h-[44px]',
+                        'min-h-[44px] rounded-xl border-2 px-2 py-3 text-sm font-heading font-semibold transition-all duration-200',
                         selected === amount && !custom
                           ? 'bg-primary text-white border-primary shadow-md shadow-primary/20 -translate-y-0.5'
                           : 'bg-bg-muted text-text-base border-transparent hover:border-primary/30 hover:bg-bg-warm',

@@ -42,7 +42,7 @@ export default function AboutSection() {
             {/* Main card */}
             <div className="relative rounded-3xl overflow-hidden shadow-premium">
               {/* Placeholder visual */}
-              <div className="relative h-[380px] lg:h-[440px] bg-gradient-to-br from-bg-warm via-secondary/60 to-primary-light/30 overflow-hidden">
+              <div className="relative h-[300px] sm:h-[360px] lg:h-[440px] bg-gradient-to-br from-bg-warm via-secondary/60 to-primary-light/30 overflow-hidden">
                 {cardImageUrl.trim() ? (
                   <motion.div
                     animate={reduce ? {} : { scale: [1, 1.04, 1] }}
@@ -70,11 +70,15 @@ export default function AboutSection() {
               </div>
 
               {/* Overlay stat card */}
-              <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-t border-white/50 px-6 py-4 grid grid-cols-3">
+              <div className="absolute bottom-0 left-0 right-0 grid grid-cols-3 border-t border-white/50 bg-white/90 px-2 py-2.5 backdrop-blur-sm sm:px-6 sm:py-4">
                 {statCards.map((stat) => (
-                  <div key={stat.label} className="text-center border-r border-gray-200 last:border-r-0">
-                    <p className="font-heading text-2xl font-extrabold text-primary">{stat.value}</p>
-                    <p className="text-xs text-text-muted">{stat.label}</p>
+                  <div key={stat.label} className="min-w-0 px-1 text-center border-r border-gray-200 last:border-r-0 sm:px-2">
+                    <p className="font-heading text-[1.05rem] font-extrabold leading-tight text-primary [overflow-wrap:anywhere] sm:text-2xl">
+                      {stat.value}
+                    </p>
+                    <p className="mt-0.5 text-[10px] leading-tight text-text-muted [overflow-wrap:anywhere] sm:text-xs">
+                      {stat.label}
+                    </p>
                   </div>
                 ))}
               </div>

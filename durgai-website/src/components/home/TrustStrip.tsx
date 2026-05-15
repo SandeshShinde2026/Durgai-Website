@@ -1,11 +1,10 @@
-import { ShieldCheck, Award, FileCheck, Globe, Hospital, Lock, BadgeCheck } from 'lucide-react'
+import { ShieldCheck, Award, FileCheck, Hospital, Lock, BadgeCheck } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 const TRUST_ITEMS = [
   { icon: ShieldCheck, key: 'registeredNgo' },
   { icon: FileCheck, key: 'approved80g' },
   { icon: Award, key: 'certified12a' },
-  { icon: Globe, key: 'fcraApproved' },
   { icon: Hospital, key: 'partnerHospitals' },
   { icon: Lock, key: 'razorpaySecured' },
   { icon: BadgeCheck, key: 'csrEligible' },
@@ -26,17 +25,17 @@ function TrustBadge({
 }) {
   return (
     <li
-      className="flex items-center gap-3 flex-shrink-0 bg-white border border-gray-100 rounded-2xl px-5 py-3 shadow-sm select-none min-h-[56px]"
+      className="flex min-h-[52px] flex-shrink-0 select-none items-center gap-2.5 rounded-xl border border-gray-100 bg-white px-4 py-2.5 shadow-sm sm:min-h-[56px] sm:gap-3 sm:rounded-2xl sm:px-5 sm:py-3"
       aria-hidden="false"
     >
-      <div className="w-8 h-8 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10 sm:h-8 sm:w-8 sm:rounded-xl">
         <Icon className="w-4 h-4 text-primary" aria-hidden="true" />
       </div>
       <div className="leading-tight">
-        <p className="font-ui font-semibold text-[13px] text-text-base whitespace-nowrap tracking-tight">
+        <p className="whitespace-nowrap font-ui text-xs font-semibold tracking-tight text-text-base sm:text-[13px]">
           {label}
         </p>
-        <p className="text-[11px] text-text-muted mt-0.5 whitespace-nowrap">{sub}</p>
+        <p className="mt-0.5 whitespace-nowrap text-[10px] text-text-muted sm:text-[11px]">{sub}</p>
       </div>
     </li>
   )
@@ -53,17 +52,17 @@ export default async function TrustStrip({ locale }: { locale: string }) {
       {/* Left fade mask */}
       <div
         aria-hidden="true"
-        className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"
+        className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-8 bg-gradient-to-r from-gray-50 to-transparent sm:w-20"
       />
       {/* Right fade mask */}
       <div
         aria-hidden="true"
-        className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"
+        className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-8 bg-gradient-to-l from-white to-transparent sm:w-20"
       />
 
       {/* Marquee track — items doubled for seamless loop */}
       <ul
-        className="flex items-center gap-4 animate-marquee w-max"
+        className="flex w-max animate-marquee items-center gap-3 sm:gap-4"
         role="list"
         aria-label={t('aria.list')}
       >

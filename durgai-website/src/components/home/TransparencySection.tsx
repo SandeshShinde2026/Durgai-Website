@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion } from 'framer-motion'
-import { Download, PieChart, FileText, ExternalLink } from 'lucide-react'
+import { PieChart, FileText, ExternalLink } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { fadeInUp, fadeInRight, sectionStagger, staggerContainer } from '@/lib/animations'
 
@@ -29,7 +29,6 @@ const FUND_BREAKDOWN = [
 const DOCUMENTS = [
   { key: 'annualReport', icon: FileText, href: '#' },
   { key: 'auditedAccounts', icon: FileText, href: '#' },
-  { key: 'fcraCertificate', icon: Download, href: '#' },
   { key: 'csrImpact', icon: ExternalLink, href: '#' },
 ]
 

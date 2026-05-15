@@ -1,5 +1,7 @@
 import { promises as fs } from 'fs'
 import path from 'path'
+import { execFile } from 'node:child_process'
+import { promisify } from 'node:util'
 import { NextResponse, type NextRequest } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { Redis } from '@upstash/redis'
@@ -11,6 +13,7 @@ import { routing, type AppLocale } from '@/i18n/routing'
 export const dynamic = 'force-dynamic'
 
 const LOCALES = routing.locales
+const execFileAsync = promisify(execFile)
 
 function isLocale(locale: string): locale is AppLocale {
   return LOCALES.includes(locale as AppLocale)
@@ -75,6 +78,7 @@ export async function GET(request: NextRequest) {
 type UpdateBody = {
   locale?: string
   content?: unknown
+  autoCommit?: boolean
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -145,6 +149,52 @@ async function normalizeStoriesImages(content: Record<string, unknown>) {
   }
 }
 
+async function hasWorkingTreeChanges(filePathFromRepoRoot: string) {
+  try {
+    await execFileAsync('git', ['diff', '--quiet', '--', filePathFromRepoRoot], {
+      cwd: process.cwd(),
+    })
+    return false
+  } catch {
+    return true
+  }
+}
+
+async function hasStagedChanges(filePathFromRepoRoot: string) {
+  try {
+    await execFileAsync('git', ['diff', '--cached', '--quiet', '--', filePathFromRepoRoot], {
+      cwd: process.cwd(),
+    })
+    return false
+  } catch {
+    return true
+  }
+}
+
+async function autoCommitLocaleFile(locale: AppLocale) {
+  const repoRoot = process.cwd()
+  const localeFilePath = getMessagesPath(locale)
+  const relativePath = path.relative(repoRoot, localeFilePath).replaceAll('\\', '/')
+
+  await execFileAsync('git', ['rev-parse', '--is-inside-work-tree'], { cwd: repoRoot })
+
+  const changed = await hasWorkingTreeChanges(relativePath)
+  if (!changed) {
+    return { attempted: true, committed: false, message: 'No file changes to commit.' }
+  }
+
+  await execFileAsync('git', ['add', '--', relativePath], { cwd: repoRoot })
+
+  const staged = await hasStagedChanges(relativePath)
+  if (!staged) {
+    return { attempted: true, committed: false, message: 'No staged changes to commit.' }
+  }
+
+  const commitMessage = `chore(content): update ${locale} messages via admin`
+  await execFileAsync('git', ['commit', '-m', commitMessage, '--', relativePath], { cwd: repoRoot })
+  return { attempted: true, committed: true, message: `Committed ${relativePath}.` }
+}
+
 export async function PUT(request: NextRequest) {
   const session = await getServerSession(authOptions)
   if (!session?.user) {
@@ -164,6 +214,7 @@ export async function PUT(request: NextRequest) {
   const body = (await request.json().catch(() => ({}))) as UpdateBody
   const locale = body.locale
   const content = body.content
+  const autoCommitRequested = body.autoCommit === true
 
   if (!locale || !isLocale(locale)) {
     return NextResponse.json({ error: 'Invalid locale.' }, { status: 400 })
@@ -175,8 +226,43 @@ export async function PUT(request: NextRequest) {
 
   const normalizedContent = await normalizeStoriesImages(content as Record<string, unknown>)
 
-  const redis = getRedis()
-  await redis.set(getRedisKey(locale as AppLocale), normalizedContent)
+  await fs.writeFile(
+    getMessagesPath(locale),
+    `${JSON.stringify(normalizedContent, null, 2)}\n`,
+    'utf-8',
+  )
+
+  try {
+    const redis = getRedis()
+    await redis.set(getRedisKey(locale as AppLocale), normalizedContent)
+  } catch {
+    // Redis unavailable — file system stays source of truth.
+  }
+
+  let commitResult: {
+    attempted: boolean
+    committed: boolean
+    message: string
+  } | null = null
+
+  if (autoCommitRequested) {
+    try {
+      commitResult = await autoCommitLocaleFile(locale as AppLocale)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Auto-commit failed.'
+      commitResult = {
+        attempted: true,
+        committed: false,
+        message,
+      }
+      await writeAdminAuditLog({
+        event: 'content_update',
+        username: session.user.name ?? 'admin',
+        locale,
+        details: `Auto-commit failed: ${message}`,
+      })
+    }
+  }
 
   await writeAdminAuditLog({
     event: 'content_update',
@@ -184,5 +270,8 @@ export async function PUT(request: NextRequest) {
     locale,
   })
 
-  return NextResponse.json({ ok: true })
+  return NextResponse.json({
+    ok: true,
+    autoCommit: commitResult,
+  })
 }
