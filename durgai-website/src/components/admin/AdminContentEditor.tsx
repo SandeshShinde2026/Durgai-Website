@@ -190,9 +190,9 @@ export default function AdminContentEditor() {
     function countFields(node: unknown): number {
       if (node === null || node === undefined) return 0
       if (typeof node === 'string' || typeof node === 'number' || typeof node === 'boolean') return 1
-      if (Array.isArray(node)) return node.reduce((total, item) => total + countFields(item), 0)
+      if (Array.isArray(node)) return node.reduce((total: number, item) => total + countFields(item), 0)
       if (isObject(node)) {
-        return Object.values(node).reduce((total, value) => total + countFields(value), 0)
+        return Object.values(node).reduce((total: number, value) => total + countFields(value), 0)
       }
       return 0
     }
